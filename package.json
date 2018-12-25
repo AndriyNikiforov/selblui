@@ -1,0 +1,22 @@
+{
+  "name": "framesel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "selenium:install": "./node_modules/.bin/selenium-standalone install",
+    "selenium:start": "./node_modules/.bin/selenium-standalone start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "faker": "^4.1.0",
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "selenium-standalone": "^6.15.4"
+  }
+}
