@@ -1,3 +1,5 @@
+'use strict';
+
 export default class helperElement {
    constructor(driver, wd) {
      this.driver = driver;

@@ -1,6 +1,7 @@
 'use strict';
 
 const faker = require('faker');
+
 const wd = require('selenium-webdriver');
 const until = wd.until;
 
