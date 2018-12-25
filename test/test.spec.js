@@ -15,17 +15,18 @@ const driver = new wd.Builder()
   .build();
 
 describe('beta', () => {
-    after(() => {
-     // Faker data init
+    before(() => {
+      // Fake data init
     });
 
     it('test', async () => {
         await driver.get('https://google.com')
           .then(() => {
+            // TEST CODE
           });
     });
 
-    before(() => {
-      //driver.quit();
+    after(() => {
+       driver.quit();
     });
 });
