@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "assert": "^1.4.1",
     "chai": "^4.2.0",
+    "chromedriver": "^2.45.0",
     "faker": "^4.1.0",
     "mocha": "^5.2.0",
     "selenium-webdriver": "^4.0.0-alpha.1"

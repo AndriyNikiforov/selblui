@@ -2,32 +2,22 @@
 
 const faker = require('faker');
 
-const wd = require('selenium-webdriver');
-const until = wd.until;
+const browser = require('selenium-webdriver/chrome');
+const { By, until } = require('selenium-webdriver');
 
-const driver = new wd.Builder()
-  .usingServer('http://localhost:4444/wd/hub')
-  .withCapabilities({
-    'browserName': 'chrome',
-    'version': '',
-    'platform': 'ANY',
-    'javascriptEnabled': true
-   })
-  .build();
+const driver = browser.Driver.createSession();
 
 describe('beta', () => {
     before(() => {
-      // Fake data init
+      // Some code
     });
 
     it('test', async () => {
         await driver.get('https://google.com')
           .then(() => {
-            // TEST CODE
-          });
-    });
+            driver.wait(until.elementLocated(By.name('q'), 1000));
 
-    after(() => {
-       driver.quit();
+            driver.findElement(By.name('q')).sendKeys('golang');
+          });
     });
 });
