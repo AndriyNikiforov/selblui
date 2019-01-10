@@ -3,8 +3,6 @@
 const { By, until } = require('selenium-webdriver');
 const driver = require('selenium-webdriver/chrome');
 
-
-
 /**
  * @class {{BasePage}}
  */
