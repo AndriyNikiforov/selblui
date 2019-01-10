@@ -1,6 +1,11 @@
 'use strict';
 
 /**
+ * @const {Object} fs
+ */
+const fs = require('fs');
+
+/**
  * @const {Object} By
  * @const {Object} until
  */
@@ -10,6 +15,17 @@ const { By, until } = require('selenium-webdriver');
  * @const {Object} driver
  */
 const driver = require('selenium-webdriver/chrome');
+
+/**
+ * @method SaveImage
+ * @param {String} name
+ * @param {Data} data
+ */
+const saveImage = (name, data) =>  {
+   fs.writeFile(`./screenshot/${name}`,
+    data.replace(/^data:image\/png;base64,/,''), 'base64',
+    (err) => console.error(err));
+};
 
 /**
  * @class BasePage
@@ -99,11 +115,48 @@ class BasePage {
   }
 
   /**
+   * @method selectElement
+   * @param {Object} select
+   * @param {Object} option
+   * @param {Number} waitTime
+   */
+  selectElement(select, option, waitTime) {
+    this.driver.findElement(select)
+      .click();
+
+    this.waitElement(option, waitTime);
+
+    this.driver
+      .findElement(option).click();
+
+    this.driver
+      .findElement(this.By.tagName('body')).click();
+  }
+
+  /**
    * @method visitSite
    * @param {String} address
    */
   visitSite(address) {
     this.driver.get(address);
+  }
+
+  /**
+   * @method screenShot
+   * @param {String} name
+   */
+  screenShot(name) {
+    this.driver
+      .takeScreenshot()
+      .then((data) => saveImage(name, data));
+  }
+
+  /**
+   * @method exit
+   * @description Close browser
+   */
+  exit() {
+    this.driver.quit();
   }
 }
 

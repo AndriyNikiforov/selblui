@@ -23,6 +23,7 @@ class BetaPage extends BasePage {
   firstAction(address, element, text) {
     this.visitSite(address);
     this.setTextInput(element, text);
+    this.screenShot('gg.png');
   }
 }
 
