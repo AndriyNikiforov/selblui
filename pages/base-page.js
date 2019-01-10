@@ -1,10 +1,18 @@
 'use strict';
 
+/**
+ * @const {Object} By
+ * @const {Object} until
+ */
 const { By, until } = require('selenium-webdriver');
+
+/**
+ * @const {Object} driver
+ */
 const driver = require('selenium-webdriver/chrome');
 
 /**
- * @class {{BasePage}}
+ * @class BasePage
  */
 class BasePage {
   constructor() {
@@ -14,14 +22,14 @@ class BasePage {
   }
 
   /**
-   * @method SiteTitle
+   * @method getSiteTitle
    */
   getSiteTitle() {
     return this.driver.getTitle();
   }
 
   /**
-   * @method ElementById
+   * @method getElementById
    * @param {String} id
    */
   getElementById(id) {
@@ -30,7 +38,7 @@ class BasePage {
   }
 
   /**
-   * @method ElementByClass
+   * @method getElementByClass
    * @param {String} cssClass
    */
   getElementByClass(cssClass) {
@@ -39,7 +47,7 @@ class BasePage {
   }
 
   /**
-   * @method ElementByXPath
+   * @method getElementByXPath
    * @param {String} xPath
    */
   getElementByXPath(xPath) {
@@ -69,7 +77,7 @@ class BasePage {
 
   /**
    * @method setDataTextArea
-   * @param {Locator: locator} element
+   * @param {Locator} element
    * @param {String} text
    */
   setDataTextArea(element, text) {
@@ -80,7 +88,7 @@ class BasePage {
 
   /**
    * @method waitElement
-   * @param {Locator: locator} element
+   * @param {Locator} element
    * @param {Number} time
    */
   waitElement(element, time) {
@@ -91,7 +99,7 @@ class BasePage {
   }
 
   /**
-   * @method address
+   * @method visitSite
    * @param {String} address
    */
   visitSite(address) {

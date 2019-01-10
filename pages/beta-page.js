@@ -5,6 +5,9 @@
  */
 const BasePage = require('./base-page');
 
+/**
+ * @class BetaPage
+ */
 class BetaPage extends BasePage {
   constructor() {
     super();
