@@ -1,6 +1,11 @@
 'use strict';
 
 /**
+ * @var {Object} for call env parameters
+ */
+const dotenv = require('dotenv');
+
+/**
  * @var {Object} for generate fake data.
  */
 const faker = require('faker');
@@ -22,15 +27,16 @@ const driver = browser.Driver.createSession();
 
 describe('beta', () => {
     before(() => {
-      // Some code
+      dotenv.load();
     });
 
     /**
      * @function test Simple example how to write code
      */
     it('test', async () => {
-        await driver.get('https://google.com')
+        await driver.get(process.env.BASE_URL)
           .then(() => {
+
             driver.wait(until
               .elementLocated(By.name('q'),
                1000));

@@ -20,6 +20,8 @@
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
-    "selenium-standalone": "^6.15.4"
+    "dotenv": "^6.2.0",
+    "selenium-standalone": "^6.15.4",
+    "webpack": "^4.28.1"
   }
 }
