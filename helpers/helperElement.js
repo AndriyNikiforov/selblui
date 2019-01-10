@@ -1,26 +1,20 @@
 'use strict';
 
 export default class helperElement {
-   constructor(driver, wd) {
+   constructor(driver, by) {
      this.driver = driver;
-     this.wd = wd;
+     this.by = by;
    }
 
   reactSelectClick(selectClass, optionClass) {
       this.driver
-        .findElement(this.wd.By.css(selectClass))
+        .findElement(this.by.css(selectClass))
         .click();
 
       this.driver.wait();
 
       this.driver
-        .findElement(this.wd.By.css(optionClass))
+        .findElement(this.by.css(optionClass))
         .click();
-  }
-
-  fieldSenData(id, value) {
-    this.driver
-      .findElement(this.wd.By.id(id))
-      .sendKeys(value);
   }
 }

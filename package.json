@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "selenium:install": "./node_modules/.bin/selenium-standalone install",
-    "selenium:start": "./node_modules/.bin/selenium-standalone start",
-    "test": "./node_modules/.bin/mocha --timeout=200000"
+    "selenium:install": "selenium-standalone install",
+    "selenium:start": "selenium-standalone start",
+    "test": "mocha --timeout=200000"
   },
   "keywords": [],
   "author": "",

@@ -1,29 +1,14 @@
 'use strict';
 
 /**
- * @var {Object} for call env parameters
+ * @const {Object} dotenv - for init env parameters
  */
 const dotenv = require('dotenv');
 
 /**
- * @var {Object} for generate fake data.
+ * @const {Object} betaPage - for call action
  */
-const faker = require('faker');
-
-/**
- * @var {Object} for create session
- */
-const browser = require('selenium-webdriver/chrome');
-
-/**
- * Objects for work with elements
- */
-const { By, until } = require('selenium-webdriver');
-
-/**
- * @var {Object} for create browser and make actions
- */
-const driver = browser.Driver.createSession();
+const betaPage = require('../pages/beta-page');
 
 describe('beta', () => {
     before(() => {
@@ -34,15 +19,6 @@ describe('beta', () => {
      * @function test Simple example how to write code
      */
     it('test', async () => {
-        await driver.get(process.env.BASE_URL)
-          .then(() => {
-
-            driver.wait(until
-              .elementLocated(By.name('q'),
-               1000));
-
-            driver.findElement(By.name('q'))
-              .sendKeys('golang');
-          });
+        await betaPage.firstAction(process.env.BASE_URL, '[name="q"]', 'golang');
     });
 });
