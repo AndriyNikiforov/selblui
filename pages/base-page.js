@@ -17,7 +17,7 @@ const { By, until } = require('selenium-webdriver');
  * @param {Data} data
  */
 const saveImage = (name, data) =>  {
-   fs.writeFile(`./screenshot/${name}`,
+   fs.writeFile(`./screenshots/${name}`,
     data.replace(/^data:image\/png;base64,/,''), 'base64',
     (err) => console.error(err));
 };
