@@ -11,11 +11,6 @@ const fs = require('fs');
  */
 const { By, until } = require('selenium-webdriver');
 
-// /**
-//  * @const {Object} driver
-//  */
-// const driver = require('selenium-webdriver/firefox');
-
 /**
  * @method SaveImage
  * @param {String} name

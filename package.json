@@ -12,12 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apify": "^0.10.3",
     "assert": "^1.4.1",
     "chai": "^4.2.0",
     "chromedriver": "^2.45.0",
     "faker": "^4.1.0",
     "geckodriver": "^1.14.1",
     "mocha": "^5.2.0",
+    "request-promise": "^4.2.2",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
