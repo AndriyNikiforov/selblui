@@ -6,7 +6,8 @@
   "scripts": {
     "selenium:install": "selenium-standalone install",
     "selenium:start": "selenium-standalone start",
-    "test": "mocha --timeout=200000"
+    "test": "mocha --timeout=200000",
+    "crawler": "node /crawler/index"
   },
   "keywords": [],
   "author": "",
