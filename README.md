@@ -13,3 +13,5 @@ HELP
 1. Crawler doc: <http://nodecrawler.org/#working-with-cheerio>
 
 2. Selenium doc: <https://seleniumhq.github.io/selenium/docs/api/javascript/>
+
+3. Cheerio doc: <https://cheerio.js.org/>
