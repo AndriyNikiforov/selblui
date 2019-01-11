@@ -11,10 +11,10 @@ const fs = require('fs');
  */
 const { By, until } = require('selenium-webdriver');
 
-/**
- * @const {Object} driver
- */
-const driver = require('selenium-webdriver/chrome');
+// /**
+//  * @const {Object} driver
+//  */
+// const driver = require('selenium-webdriver/firefox');
 
 /**
  * @method SaveImage
@@ -31,10 +31,10 @@ const saveImage = (name, data) =>  {
  * @class BasePage
  */
 class BasePage {
-  constructor() {
+  constructor(driver) {
     this.By = By;
     this.until = until;
-    this.driver = driver.Driver.createSession();
+    this.driver = driver;
   }
 
   /**

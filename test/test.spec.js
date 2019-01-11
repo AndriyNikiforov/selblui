@@ -1,7 +1,11 @@
 'use strict';
 
 const dotenv = require('dotenv');
-const betaPage = require('../pages/beta-page');
+const BetaPage = require('../pages/beta-page');
+const driver = require('selenium-webdriver/chrome');
+
+const chrome = driver.Driver.createSession();
+const page = new BetaPage(chrome);
 
 describe('beta', () => {
     before(() => {
@@ -9,6 +13,6 @@ describe('beta', () => {
     });
 
     it('test', async () => {
-        await betaPage.firstAction(process.env.BASE_URL, '[name="q"]', 'golang');
+        await page.firstAction(process.env.BASE_URL, '[name="q"]', 'golang');
     });
 });

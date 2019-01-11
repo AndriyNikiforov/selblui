@@ -9,8 +9,8 @@ const BasePage = require('./base-page');
  * @class BetaPage
  */
 class BetaPage extends BasePage {
-  constructor() {
-    super();
+  constructor(driver) {
+    super(driver);
   }
 
   /**
@@ -27,4 +27,4 @@ class BetaPage extends BasePage {
   }
 }
 
-module.exports = new BetaPage();
+module.exports = BetaPage;
