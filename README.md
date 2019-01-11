@@ -10,5 +10,6 @@ Commands
 
 
 HELP
-Crawler doc: <http://nodecrawler.org/#working-with-cheerio>
-Selenium doc: <https://seleniumhq.github.io/selenium/docs/api/javascript/>
+1. Crawler doc: <http://nodecrawler.org/#working-with-cheerio>
+
+2. Selenium doc: <https://seleniumhq.github.io/selenium/docs/api/javascript/>
