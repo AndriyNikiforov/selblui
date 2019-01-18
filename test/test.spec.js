@@ -1,7 +1,8 @@
 'use strict';
 
+const fs = require('fs');
 const dotenv = require('dotenv');
-const BetaPage = require('../pages/beta-page');
+
 const driver = require('selenium-webdriver/chrome');
 
 const chrome = driver.Driver.createSession();
@@ -12,7 +13,16 @@ describe('beta', () => {
       dotenv.load();
     });
 
-    it('test', async () => {
-        await page.firstAction(process.env.BASE_URL, '[name="q"]', 'golang');
+    it('test', () => {
     });
+
 });
+
+
+const saveImage = (name, data) =>  {
+  const base64Data = data.replace(/^data:image\/png;base64,/,"");
+
+  fs.writeFile(`./screenshots/${name}`, base64Data, 'base64', (err) => {
+       if(err) console.log(err);
+  });
+};
